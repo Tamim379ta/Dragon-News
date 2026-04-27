@@ -1,9 +1,7 @@
 import { getNewsDetails } from '@/lib/data';
 import Image from 'next/image';
 import React from 'react';
-import { CiBookmark, CiShare2 } from 'react-icons/ci';
-import { FaArrowRight, FaStar } from 'react-icons/fa';
-import { IoEyeOutline } from 'react-icons/io5';
+import { FaArrowRight } from 'react-icons/fa';
 import Link from 'next/link';
 
 const NewsDetailsPage = async ({ params }) => {

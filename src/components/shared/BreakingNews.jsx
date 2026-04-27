@@ -27,7 +27,7 @@ const BreakingNews = () => {
 
       <div className='btn btn-secondary'>Latest</div>
 
-      <Marquee>
+      <Marquee pauseOnHover={true}>
         <div className='flex gap-10'>
           {
             breakingNews.map(n => <p key={n.id}>{n.news}</p>)
