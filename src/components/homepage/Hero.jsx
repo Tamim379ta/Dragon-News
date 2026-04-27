@@ -1,13 +1,8 @@
-import React from 'react';
+import { redirect } from "next/navigation";
 
-const HeroPage = () => {
-  return (
-    <div>
-
-      this is hero 
-      
-    </div>
-  );
+const categoryId = "01"
+const HeroPage = async () => {
+redirect(`/category/${categoryId}`)
 };
 
 export default HeroPage;

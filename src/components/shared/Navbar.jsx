@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Link from 'next/link';
+import Navlink from './Navlink';
 import LoginImg from '@/assets/user.png'
 import React from 'react';
 
@@ -10,19 +10,19 @@ const Navbar = () => {
       <div></div>
       <ul className='flex gap-4'>
         <li>
-          <Link href={'/'}>
+          <Navlink href={'/'}>
             Home
-          </Link>
+          </Navlink>
         </li>
         <li>
-          <Link href={'/about'}>
+          <Navlink href={'/about'}>
             About
-          </Link>
+          </Navlink>
         </li>
         <li>
-          <Link href={'/Career'}>
+          <Navlink href={'/career'}>
             Career
-          </Link>
+          </Navlink>
         </li>
       </ul>
 
