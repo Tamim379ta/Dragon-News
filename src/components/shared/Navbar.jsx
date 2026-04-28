@@ -1,9 +1,18 @@
+"use client"
+
 import Image from 'next/image';
 import Navlink from './Navlink';
 import LoginImg from '@/assets/user.png'
 import React from 'react';
 import Link from 'next/link';
+import { authClient } from "@/lib/auth-client"
+
 const Navbar = () => {
+
+  const { data: session } = authClient.useSession()
+
+  const user = session?.user;
+
   return (
     <div className='container mx-auto flex justify-between  mt-5'>
 
@@ -26,10 +35,16 @@ const Navbar = () => {
         </li>
       </ul>
 
-      <div className='flex gap-2'>
-        <Image src={LoginImg} alt='Login' width={40} height={40}/>
-        <Link href={'/login'} className='btn btn-neutral text-white'>Login</Link>
-      </div>
+      {
+        user ? (<div className='flex  items-center gap-2'>
+          <p> Hello {user.name}</p>
+          <Image src={LoginImg} alt='Login' width={40} height={40} />
+          <button onClick={ async() => await authClient.signOut()} className='btn btn-neutral text-white'>Logout</button>
+        </div>) :
+          (
+            <Link  href={'/login'} className='btn btn-neutral text-white'>LogIn</Link>
+          )
+     }
     </div>
   );
 };
