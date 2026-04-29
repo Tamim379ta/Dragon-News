@@ -9,13 +9,13 @@ const CategoryNewsPage = async ({ params }) => {
   const category = await getCategory();
   const categoryNews = await getNews(id);
   return (
-    <div className='grid grid-cols-12 gap-5 container mx-auto mt-5'>
+    <div className='grid grid-cols-1 md:grid-cols-12 gap-5 container mx-auto mt-5'>
 
-      <div className='col-span-3'>
+      <div className='p-10 md:p-0 grid-cols-1 md:col-span-3'>
         <RightBar category={category} activeId={id} />
       </div>
 
-      <div className='col-span-6 '>
+      <div className='grid-cols-1 md:col-span-6 '>
 
         <div className='flex flex-col gap-10'>
           {
@@ -27,7 +27,7 @@ const CategoryNewsPage = async ({ params }) => {
         </div>
       </div>
 
-      <div className='col-span-3'>
+      <div className='grid-cols-1 md:col-span-3'>
         <LeftBar />
       </div>
 

@@ -21,7 +21,7 @@ const CareerPage = () => {
         </p>
 
         <p>
-          Whether you're a writer, developer, designer, or analyst — there's a
+          Whether youre a writer, developer, designer, or analyst — theres a
           place for you in our growing team.
         </p>
       </div>

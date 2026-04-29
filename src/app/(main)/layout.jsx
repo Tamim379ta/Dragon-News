@@ -10,7 +10,9 @@ const MainLayout = ({ children }) => {
   <Header/>
   <BreakingNews/>
   <Navbar/>
+  <main>
   {children}
+  </main>
   <Footer/>
   </>
   );

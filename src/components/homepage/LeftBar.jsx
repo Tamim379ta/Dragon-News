@@ -17,7 +17,7 @@ const LeftBar = () => {
     })
   }
   return (
-    <div>
+    <div className='px-10 md:p-0'>
 
       <h1 className='font-bold mb-3' >Login With</h1>
 
